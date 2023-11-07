@@ -1,7 +1,9 @@
 package md.programy;
 
+import md.programy.stage.LoginStage;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        LoginStage.main(args);
     }
 }
