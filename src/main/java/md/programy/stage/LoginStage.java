@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import md.programy.controller.LoginStageController;
 
 import java.util.ResourceBundle;
 
@@ -19,6 +20,8 @@ public class LoginStage extends Application {
         ResourceBundle resourceBundle = ResourceBundle.getBundle("BUNDLES.messages");
         fxmlLoader.setResources(ResourceBundle.getBundle("BUNDLES.messages"));
         Scene scene = new Scene(fxmlLoader.load());
+        LoginStageController loginStageController = fxmlLoader.getController();
+        loginStageController.setStage(stage);
         stage.setScene(scene);
         stage.setTitle(resourceBundle.getString("title.app"));
         stage.setResizable(false);
