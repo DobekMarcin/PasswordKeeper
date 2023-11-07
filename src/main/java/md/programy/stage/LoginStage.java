@@ -4,9 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import md.programy.controller.LoginStageController;
-
-import java.util.ResourceBundle;
+import md.programy.utils.Utils;
 
 public class LoginStage extends Application {
 
@@ -16,15 +16,15 @@ public class LoginStage extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginStage.class.getResource("/FXML/MainStage.fxml"));
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("BUNDLES.messages");
-        fxmlLoader.setResources(ResourceBundle.getBundle("BUNDLES.messages"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginStage.class.getResource("/FXML/LoginStage.fxml"));
+        fxmlLoader.setResources(Utils.getResourceBundle());
         Scene scene = new Scene(fxmlLoader.load());
         LoginStageController loginStageController = fxmlLoader.getController();
         loginStageController.setStage(stage);
         stage.setScene(scene);
-        stage.setTitle(resourceBundle.getString("title.app"));
+        stage.setTitle(Utils.getResourceBundle().getString("title.app"));
         stage.setResizable(false);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 }

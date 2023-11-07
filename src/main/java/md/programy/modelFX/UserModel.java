@@ -14,8 +14,9 @@ public class UserModel {
 
     public void createAdmin() {
         Long userCount = userRepository.getAllUserCount();
-        if (userCount == 0) userRepository.createAdmin("admin", "admin");
-    }
+        if (userCount == 0) {
+            userRepository.createAdmin("admin", "admin");
+        }}
 
     public void resetAdmin() {
         userRepository.deleteAllUser();
