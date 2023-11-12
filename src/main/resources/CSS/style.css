@@ -2,38 +2,31 @@
     -fx-background-color: #3a3a3a;
 }
 
+#noLogLabel{
+-fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: red;
+    -fx-opacity: 1;
+}
+
 .label {
     -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: black;
-    -fx-opacity: 0.6;
-}
-
-.label-bright {
-    -fx-font-size: 11pt;
-    -fx-font-family: "Segoe UI Semibold";
-    -fx-text-fill: black;
-    -fx-opacity: 1;
-}
-
-.label-header {
-    -fx-font-size: 32pt;
-    -fx-font-family: "Segoe UI Light";
-    -fx-text-fill: white;
     -fx-opacity: 1;
 }
 
 .table-view {
     -fx-base: #1d1d1d;
-    -fx-control-inner-background: #3a3a3a;
-    -fx-background-color: #3a3a3a;
+    -fx-control-inner-background: #616161;
+    -fx-background-color: #616161;
     -fx-table-cell-border-color: transparent;
     -fx-table-header-border-color: transparent;
     -fx-padding: 5;
 }
 
 .table-view .column-header-background {
-    -fx-background-color: transparent;
+    -fx-background-color: #616161;
 }
 
 .table-view .column-header, .table-view .filler {
@@ -54,14 +47,15 @@
     -fx-font-size: 15pt;
     -fx-font-family: "Segoe UI";
     -fx-text-fill: white;
-    -fx-alignment: center-left;
+    -fx-alignment: center;
     -fx-opacity: 1;
     -fx-font-weight: bold;
+
 
 }
 
 .table-view:focused .table-row-cell:filled:focused:selected {
-    -fx-background-color: -fx-focus-color;
+    -fx-background-color: black;
 }
 
 .split-pane:horizontal > .split-pane-divider {
@@ -74,18 +68,18 @@
 }
 
 .menu-bar {
-    -fx-background-color: derive(#1d1d1d,20%);
+    -fx-background-color: derive(#616161,20%);
 }
 
 .context-menu {
-    -fx-background-color: derive(#1d1d1d,50%);
+    -fx-background-color: derive(#616161,50%);
 }
 
 .menu-bar .label {
     -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
-    -fx-opacity: 0.9;
+    -fx-opacity: 1;
 }
 
 .menu .left-container {
@@ -132,7 +126,7 @@
 }
 
 .button:disabled, .button:default:disabled {
-    -fx-opacity: 0.4;
+    -fx-opacity: 1;
     -fx-background-color: #1d1d1d;
     -fx-text-fill: white;
 }
@@ -152,4 +146,8 @@
 
 .menu:hover{
 -fx-background-color: black;
+}
+
+#copyButtonColumn{
+-fx-alignment: center;
 }
