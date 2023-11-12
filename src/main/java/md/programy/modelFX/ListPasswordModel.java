@@ -16,10 +16,7 @@ public class ListPasswordModel {
 
     private PasswordRepository passwordRepository = new PasswordRepository();
     public void init(){
-        passwordRepository.createDefaultPassword("Facebook","www.facebook.pl","admin","admin","To jest hasło");
-        passwordRepository.createDefaultPassword("Gmail","www.gmail.com","test@gmail.com","testujemy","To jest hasło");
-        passwordRepository.createDefaultPassword("Onet poczta","www.onet.poczta.pl","marcin@poczta.onet.pl","password","To jest hasło");
-        passwordRepository.createDefaultPassword("Filmweb","www.filmweb.com","admin","admin","To jest hasło");
+      //  insertDefaultPassword();
 
         List<Password> passwordList = passwordRepository.getAllPassword();
 
@@ -27,6 +24,13 @@ public class ListPasswordModel {
                 PasswordFX passwordFX = PasswordConverter.convertToPasswordFX(item);
                 passwordFXObservableList.add(passwordFX);
         });
+    }
+
+    private void insertDefaultPassword() {
+        passwordRepository.createDefaultPassword("Facebook","www.facebook.pl","admin","admin","To jest hasło testowe, przekraczając długośc jednej linii w tabeli. Test funkcji wprap text, sprawdzimy czy działa");
+        passwordRepository.createDefaultPassword("Gmail","www.gmail.com","test@gmail.com","testujemy","To jest hasło");
+        passwordRepository.createDefaultPassword("Onet poczta","www.onet.poczta.pl","marcin@poczta.onet.pl","password","To jest hasło");
+        passwordRepository.createDefaultPassword("Filmweb","www.filmweb.com","admin","admin","To jest hasło");
     }
 
     public ObservableList<PasswordFX> getPasswordFXObservableList() {

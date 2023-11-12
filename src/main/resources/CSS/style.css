@@ -1,3 +1,11 @@
+.table-view .scroll-bar:vertical{
+-fx-background-color: #616161;
+
+}
+
+
+
+
 .background {
     -fx-background-color: #3a3a3a;
 }
@@ -79,7 +87,7 @@
     -fx-font-size: 11pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
-    -fx-opacity: 1;
+
 }
 
 .menu .left-container {
@@ -148,6 +156,6 @@
 -fx-background-color: black;
 }
 
-#copyButtonColumn{
+#infoLabel{
 -fx-alignment: center;
 }

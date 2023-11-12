@@ -11,10 +11,6 @@ public class PasswordFX {
     private StringProperty login = new SimpleStringProperty();
     private StringProperty password = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
-    private Button copyButton = new Button();
-    {
-        copyButton.setText("Kopiuj");
-    }
 
     public long getId() {
         return id.get();
@@ -74,14 +70,6 @@ public class PasswordFX {
 
     public void setPassword(String password) {
         this.password.set(password);
-    }
-
-    public Button getCopyButton() {
-        return copyButton;
-    }
-
-    public void setCopyButton(Button copyButton) {
-        this.copyButton = copyButton;
     }
 
     public String getDescription() {

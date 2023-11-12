@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 public class LoginStageController {
 
 
+    public static final String FXML_MAIN_STAGE_FXML = "/FXML/MainStage.fxml";
     @FXML
     private Button logInButton;
     @FXML
@@ -75,7 +76,7 @@ public class LoginStageController {
     }
 
     private void openMainStage() {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginStage.class.getResource("/FXML/MainStage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginStage.class.getResource(FXML_MAIN_STAGE_FXML));
         fxmlLoader.setResources(Utils.getResourceBundle());
         Scene scene = null;
         try {
